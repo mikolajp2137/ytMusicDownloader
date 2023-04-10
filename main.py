@@ -45,6 +45,9 @@ for link in links:
         print(f"{link} is not a valid YouTube link.")
         continue
 
+    if not os.path.exists('downloads'):
+        os.makedirs('downloads')
+
     if 'playlist' in link:
         download_playlist(link)
     else:
